@@ -19,7 +19,7 @@ dataset = []
 
 #generación del contenido de dataset
 for repeticion in range(1,11):
-    n = repeticion * 500
+    n = repeticion * 100
 
     timestamp_01 = time.time()
     result = sum_of_n(n)
