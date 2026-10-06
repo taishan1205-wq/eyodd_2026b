@@ -17,13 +17,12 @@ the_sum = 0
 timestamp_01 = time.time()
 
 #iniciando la suma
-#  
+#mientras=while
 while(n > 0):
     the_sum = the_sum + n #100 + 99 + 98
     n = n-1
 #tomamos el tiempo 2
 timestamp_02 = time.time()
-
 
 #imprimimos la solucion
 print(f"La suma es {the_sum}")
