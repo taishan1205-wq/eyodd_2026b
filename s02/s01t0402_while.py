@@ -8,25 +8,26 @@ usando un ciclo while
 #importamos biblioteca time (sirve para calcular el tiempo)
 import time
 
-# creación de variables para
-# el problema 
-n = 100
-the_sum = 0
+def sum_of_n (n):
+    the_sum = 0
+    while(n > 0):
+        the_sum = the_sum + n #100 + 99 + 98
+        n = n-1
+    return the_sum
 
-#tomando el tiempo 1
-timestamp_01 = time.time()
+dataset = []
 
-#iniciando la suma
-#mientras=while
-while(n > 0):
-    the_sum = the_sum + n #100 + 99 + 98
-    n = n-1
-#tomamos el tiempo 2
-timestamp_02 = time.time()
+#generación del contenido de dataset
+for repeticion in range(1,11):
+    n = repeticion * 100
 
-#imprimimos la solucion
-print(f"La suma es {the_sum}")
+    timestamp_01 = time.time()
+    result = sum_of_n(n)
+    timestamp_02 = time.time()
 
-#calculamos el tiempo
-elapsed_time = round((timestamp_02-timestamp_01) * 1e6,2)
-print(f"Tiempo de ejecución: {elapsed_time} μs")
+    elapsed_time = round((timestamp_02 - timestamp_01) * 1e6, 2)
+    dataset.append((n, elapsed_time, result))
+
+# Impresión del dataset generado
+for tup in dataset:
+    print(tup)
