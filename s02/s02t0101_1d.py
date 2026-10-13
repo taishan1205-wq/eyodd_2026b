@@ -24,7 +24,19 @@ my_array = arr('i', [10,22,300,3,7,40,55,80,700,654,34]) #se le asigna tippo de 
 # print(len(my_array))
 
 #Iteración por indices
-for i in range(len(my_array)):
-    #print(f"Elemento:{i+1}: {my_array[i]}")
-    if my_array[i] %2 == 0:
-        print(f"Elemento Num {i+1}: {my_array[i]}")
+# for i in range(len(my_array)):
+#     #print(f"Elemento:{i+1}: {my_array[i]}")
+#     if my_array[i] %2 == 0:
+#         print(f"Elemento Num {i+1}: {my_array[i]}")
+
+#busqueda de un elemento 
+num_to_search = 200
+
+#Modificacion de u n valor usando
+#bracket notation 
+my_array[7]= 200
+
+try:
+    print(f"Localizando {num_to_search}: {my_array.index(num_to_search)}")
+except:
+    print("⚠️ Número no encontrado !!!")
