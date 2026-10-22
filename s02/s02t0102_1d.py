@@ -1,6 +1,6 @@
 #importando el modulo
 #la biblioteca array y renombrado 
-from array import array as arr
+from array import array as arr #importa la biblioteca y la herramienta arrey y la renombra 
 
 def print_array(input):
     for element in input:
