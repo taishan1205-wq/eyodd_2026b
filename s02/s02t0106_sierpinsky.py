@@ -27,20 +27,21 @@ center = columns // 2 #doble // se hace divicion entera
 #estableciendo el centro en 1 
 matrix[0][center]=1
 #print_matrix(matrix) #imprimiendo la matriz
+
 # se calcula el rsto de la matriz siguiendo la logica 
 # del sierpinsky Gasket
-
 for row in range(1, rows):
     for col in range(0,columns):
         left_upper_cell = 0
         right_uppert_cel = 0
 
         #si la columna donde estamos es mayor a 0
+        # es decir un lemento esta despues del borde izq
         if col > 0:
             left_upper_cell = matrix[row-1][col-1]
 
         #si la columna esta un elemento antes del borde derecho 
-        if col > columns - 1:
+        if col < columns - 1:
             right_uppert_cel = matrix[row-1][col+1]
         #Guardando el arreglo
         if left_upper_cell != right_uppert_cel:
