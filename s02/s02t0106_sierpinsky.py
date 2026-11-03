@@ -79,7 +79,7 @@ def draw_matrix (input_matrix, symbol="*"):
 # metodo principal 
 def main():
     # genera el triangulo de Sierpinsky
-    matrix = generate_triangle(5)
+    matrix = generate_triangle(15)
     # Limpia la pantalla antes de dibujar la matriz
     clear_screen ()
     # Dubuja la matriz en pantalla 
