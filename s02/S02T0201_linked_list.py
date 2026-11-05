@@ -31,4 +31,3 @@ current = node_01
 while current:
     print(current.data, end="-->")
     current = current.next
-    
